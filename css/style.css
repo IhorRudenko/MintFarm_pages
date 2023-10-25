@@ -1,0 +1,432 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Black.woff2") format("woff2"), url("../fonts/Inter-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  font-display: swap;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-Black.woff2") format("woff2"), url("../fonts/Raleway-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #000;
+  line-height: 1;
+  font-family: "Raleway";
+  font-size: 1rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Raleway";
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
+html,
+body {
+  scrollbar-gutter: stable;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  scrollbar-gutter: stable;
+}
+
+@supports (overflow: clip) {
+  .wrapper {
+    overflow: clip;
+  }
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стилі будуть застосовуватись до
+всіх класів, що містять *__container
+Наприклад header__container, main__container і т.п.
+Сніппет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 0.625rem;
+}
+/* ----------------------------------------------------------------------------- */
+
+.list-page {
+  background: linear-gradient(90deg, #CCDFFF 0%, #DBF4FF 100%);
+  padding: 30px;
+}
+
+.list-page__title {
+  color: #000;
+  font-family: Raleway;
+  font-weight: 900;
+  line-height: 100%;
+  font-size: 76px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.list-page__title span {
+  color: #14D15D;
+}
+
+.list-page__info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #fff;
+  width: fit-content;
+  margin: 0 auto 15px;
+}
+
+.list-page__info-text {
+  color: blue;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.list-page__info-text:hover {
+  text-decoration: underline;
+}
+
+
+.list-page__info-item {
+  color: #313131;
+  font-family: Raleway;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.list-page__info-item span {
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: 50%;
+}
+
+.info-item--1 span {
+  background-color: #14D15D;
+}
+
+.info-item--2 span {
+  background-color: yellow;
+}
+
+.info-item--3 span {
+  background-color: red;
+}
+
+.list-page__subtitle {
+  color: #000;
+  font-family: Raleway;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 110%; 
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.list-page__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+
+.list-page__item {
+  display: flex;
+  align-items: center;
+  
+}
+
+.list-page__item.done .list-page__link::before  {
+  background-color: #14D15D;
+}
+
+.list-page__item.in-process .list-page__link::before  {
+  background-color: #f3ef0a;
+}
+
+.list-page__item.not-exist .list-page__link::before  {
+  background-color: #f3400a;
+}
+
+.list-page__link {
+  color: #5A5A5A;
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  gap: 40px;
+  font-size: 22px;
+  padding: 15px 15px 15px 70px;
+  width: 100%;
+  position: relative;
+  transition: color .2s ease-in-out;
+  overflow: hidden;
+  min-height: 60px;
+  transition: all .1s ease-in-out;
+}
+
+.list-page__link:hover {
+  color: #fff;
+  transition: color .2s ease-in-out;
+  background-color: #729ee0;
+  transition: all .1s ease-in-out;
+}
+
+
+.list-page__link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 40px;
+  height: 100%;
+  flex: 0 0 30px;
+  background-color: #4E4E4E;
+  border-right: 2px solid #fff;
+} 
+
+
+
+
+@media (max-width: 1199.98px){
+  .list-page__title {
+    font-size: 60px;
+  }
+  
+  .list-page__info {
+    gap: 10px;
+  }
+
+  .list-page__info-item {
+    font-size: 20px;
+  }
+
+  .list-page__info-item span {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+  }
+
+  .list-page__subtitle {
+    font-size: 35px;
+  }
+
+  .list-page__link {
+    font-size: 18px;
+    padding: 10px 10px 10px 50px;
+    min-height: 50px;
+  }
+
+  .list-page__info-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767.98px){
+  .list-page__title {
+    font-size: 45px;
+  }
+  
+  .list-page__info-item {
+    font-size: 16px;
+  }
+
+  .list-page__info-item span {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+  }
+
+  .list-page__subtitle {
+    font-size: 24px;
+  }
+
+  .list-page__link {
+    font-size: 16px;
+    padding: 5px 10px 5px 50px;
+    min-height: 50px;
+    border-radius: 10px;
+  }
+
+  .list-page__info-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575.98px){
+  .list-page {
+    padding: 20px 10px;
+  }
+
+  .list-page__title {
+    font-size: 35px;
+  }
+
+  .list-page__info-text {
+    font-size: 14px;
+  }
+
+  .list-page__link {
+    min-height: 40px;
+  }
+}
+
+@media (max-width: 479.98px){
+  .list-page {
+    padding: 20px 0;
+  }
+}
